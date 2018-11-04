@@ -21,6 +21,8 @@ ingress:
   annotations:
     kubernetes.io/ingress.class: addon-http-application-routing
   path: /
+  hosts:
+    - dsfrontend.jx-staging.40.121.93.15.nip.io
   tls: []
 resources:
   limits:
