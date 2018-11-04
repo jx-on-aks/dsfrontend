@@ -33,11 +33,7 @@ spec:
         paths:
           - path: {{ $ingressPath }}
             backend:
-            {{- if .Values.service.name }}
-              serviceName: {{ .Values.service.name }}
-            {{- else }}
-              serviceName: {{ template "dsfrontend.fullname" . }}
-            {{- end }}
+              serviceName: dsfrontend
               servicePort: http
   {{- end }}
 {{- end }}
